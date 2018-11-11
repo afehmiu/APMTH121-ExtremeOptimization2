@@ -1,0 +1,6 @@
+reset;
+model matching.mod;
+data matching.dat;
+option solver cplex;
+solve;
+display x;
