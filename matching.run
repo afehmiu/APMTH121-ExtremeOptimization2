@@ -2,5 +2,6 @@ reset;
 model matching.mod;
 data matching.dat;
 option solver cplex;
+option cplex_options 'clocktype 2';
 solve;
 display x;
