@@ -5,3 +5,4 @@ option solver cplex;
 option cplex_options 'clocktype 2';
 solve;
 display x;
+display _solve_elapsed_time;
