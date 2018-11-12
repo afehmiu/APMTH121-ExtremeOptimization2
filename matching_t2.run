@@ -1,0 +1,8 @@
+reset;
+model matching_t2.mod;
+data matching_t2.dat;
+option solver cplex;
+option cplex_options 'clocktype 2';
+solve;
+display x;
+display _solve_elapsed_time;
