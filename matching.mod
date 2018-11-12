@@ -15,4 +15,7 @@ maximize DonorPairs: sum {i in PATIENT_DONOR_PAIRS, j in PATIENT_DONOR_PAIRS} x[
 
 subject to DonorLimit {j in PATIENT_DONOR_PAIRS}: sum {i in PATIENT_DONOR_PAIRS} x[i,j] <= 1;
 subject to RecipientLimit {i in PATIENT_DONOR_PAIRS}: sum {j in PATIENT_DONOR_PAIRS} x[i,j] <= 1;
-subject to PairIsValid {i in PATIENT_DONOR_PAIRS, j in PATIENT_DONOR_PAIRS}: x[i,j]*compatibility[i,j]*compatibility[j,i]=x[j,i];
+
+subject to Compatibility {i in PATIENT_DONOR_PAIRS, j in PATIENT_DONOR_PAIRS}: x[i,j] <= compatibility[i,j];
+
+subject to MandatoryExchange {i in PATIENT_DONOR_PAIRS, j in PATIENT_DONOR_PAIRS}: x[i,j]=x[j,i];
