@@ -1,8 +1,8 @@
 reset;
-model matching.mod;
-data matching.dat;
+model matching_t3.mod;
+data matching_t3.dat;
 option solver cplex;
 option cplex_options 'clocktype 2';
 solve;
-display x;
+display NumberCycles;
 display _solve_elapsed_time;
