@@ -2,8 +2,11 @@ reset;
 model matching_t2.mod;
 data matching_t2.dat;
 option solver cplex;
-option cplex_options 'clocktype 2';
+option cplex_options ('clocktype 2' & 
+					'timing 1 mipdisplay 5 mipinterval 1 ' &
+                      'presolve 0 mipcuts -1 cutpass -1 ');
 solve;
 display x >> task2.out.txt;
 display _solve_elapsed_time >> task2.out.txt;
 print solve_message >> task2_results.out.txt;
+
