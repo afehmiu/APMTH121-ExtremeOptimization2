@@ -1,10 +1,10 @@
 data;
 
-param num_rows := 10;     # Number of rows
-param num_cols := 10;     # Number of columns 
-param pool_of_people := 10;
+param num_rows := 250;     # Number of rows
+param num_cols := 250;     # Number of columns 
+param pool_of_people := 250;
 
 # Read from mat_raw.txt to fill matrix_value. Note that the order 
 # of the index variables matter; here one matrix is filled at a time, 
 # where for each row, the corresponding column values are assigned.
-read {k in ROWS, l in COLUMNS} compatibility[k,l] <data/10_raw.txt;
+read {k in ROWS, l in COLUMNS} compatibility[k,l] <data/250_raw.txt;
