@@ -2,7 +2,7 @@ param num_rows >= 2, integer;     # Number of rows
 param num_cols >= 2, integer;     # Number of columns 
 param pool_of_people integer; 
 
-set PATIENT_DONOR_PAIRS    := 1 .. (pool_of_people)/2; 
+set PATIENT_DONOR_PAIRS    := 1 .. pool_of_people; 
 set ROWS    := 1 .. num_rows;	  # set of rows
 set COLUMNS := 1 .. num_cols;	  # set of columns
 
