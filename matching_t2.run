@@ -4,5 +4,6 @@ data matching_t2.dat;
 option solver cplex;
 option cplex_options 'clocktype 2';
 solve;
-display x;
-display _solve_elapsed_time;
+display x > task2.out.txt;
+display _solve_elapsed_time > task2.out.txt;
+print solve_message >> task2_results.out.txt;
